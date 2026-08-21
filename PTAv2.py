@@ -522,7 +522,7 @@ def write_output_workbook(
 # --------------------- Streamlit UI ---------------------
 
 def main() -> None:
-    st.set_page_config(page_title="Payment Term Analysis", page_icon="https://arc.workspaceoneaccess.com/catalog-portal/services/api/resources/media/b7bbd3c4-ade2-4d72-a9c9-006abb088f59", layout="wide")
+    st.set_page_config(page_title="Payment Term Analysis", page_icon="📄", layout="wide")
 
     st.title("Contract vs Supplier Payment Term Analysis")
     st.caption(
