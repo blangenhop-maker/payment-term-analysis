@@ -361,6 +361,9 @@ def build_analysis(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Dat
         if count == 1 and has_dual:
             return "Review needed: contract is tagged Dual Payment Terms, but vendor has 1 contract in Coupa."
 
+        if count == 1 and mismatch:
+            return "Review needed: payment term mismatch. Vendor has 1 contract in Coupa."
+        
         if count > 1 and all_dual and (mismatch or included_context):
             return f"Likely OK to ignore: vendor has {count} {contract_word} in Coupa and all contracts are tagged Dual Payment Terms."
 
